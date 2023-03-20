@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&family=Roboto:wght@400;500;700&display=swap');
+:root{
+    --bg-primary-color:#2C3333;
+    --bg-secondary-color:#2E4F4F;
+    --bg-accent-color:#0E8388;
+    --bg-text-color:#CBE4DE;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+
+}
+body{
+    background-color: var(--bg-primary-color);
+    color:var(--bg-text-color);
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro{
+    padding: 20px;
+    display: flex;
+    width:100vw;
+    justify-content: space-between;
+}
+.logo span{
+    font-size:1.5rem;
+    font-weight: 600;
+}
+.logo span#color{
+    color: var(--bg-accent-color);
+}
+navbar{
+    width:40vw;
+}
+.intro navbar{
+    display: flex;
+    justify-content: space-around;
+}
+navbar nav a{
+    text-decoration: none;
+    color:var(--bg-text-color);
+    font-size:1.1rem;
+}
+navbar nav{
+    position: relative;
+}
+navbar nav::after{
+    content: "";
+    position: absolute;
+    height:2px;
+    width:0;
+    background-color: var(--bg-text-color);
+    bottom: 3px;
+    left:50%;
+    transform: translateX(-50%);
+    transition: 2ms;
+}
+navbar nav:hover::after{
+    width: 80%;
+}
+
+#profile{
+    background-image: url("profile.jpg");
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin:60px 0;
+}
+#whoami{
+    width:60%;
+    line-height: 3rem;
+}
+#whoami h3{
+    font-size:1.5rem;
+    margin:20px;
+    text-align: center;
+}
+.quote{
+    font-size:3rem;
+    color:var(--bg-accent-color);
+}
+#divider{
+    width:40%;
+    height: 2px;
+    background-color: var(--bg-accent-color);
+    margin-top:80px;
+}
+.contact-cards{
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-around;
+    width: 100vw;
+}
+.contact-cards #address{
+    display: flex;
+    flex-direction: column;
+    height:180px;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-cards #address .title-card{
+    font-size: 1.2rem;
+    color:var(--bg-accent-color);
+}
+#instagram i,#linkedin i,#github i{
+    font-size:2rem;
+}
+.domain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.domain p{
+    margin-top: 20px;
+    position: relative;
+}
+
+.domain p::after{
+    content:"";
+    width:20px;
+    height:2px;
+    position: absolute;
+    background-color: var(--bg-text-color);
+    border-radius: 1px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#divider.contacts{
+    position: absolute;
+    bottom:100px
+}
+.centered{
+    width:60vw;
+}
